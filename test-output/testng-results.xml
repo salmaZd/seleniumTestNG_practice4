@@ -1,63 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-06T15:38:34 AST" name="Default suite" finished-at="2023-04-06T15:39:10 AST" duration-ms="36014">
+  <suite started-at="2023-04-08T23:36:41 AST" name="Default suite" finished-at="2023-04-08T23:37:06 AST" duration-ms="25247">
     <groups>
     </groups>
-    <test started-at="2023-04-06T15:38:34 AST" name="Default test" finished-at="2023-04-06T15:39:10 AST" duration-ms="36014">
+    <test started-at="2023-04-08T23:36:41 AST" name="Default test" finished-at="2023-04-08T23:37:06 AST" duration-ms="25247">
       <class name="SmartBuy_Test1">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:SmartBuy_Test1@55a147cc]" started-at="2023-04-06T15:38:34 AST" name="beforeTest" finished-at="2023-04-06T15:39:07 AST" duration-ms="32838" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:SmartBuy_Test1@55a147cc]" started-at="2023-04-08T23:36:41 AST" name="beforeTest" finished-at="2023-04-08T23:37:01 AST" duration-ms="19821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="Test_add_SAMSUNG_50_inch()[pri:0, instance:SmartBuy_Test1@55a147cc]" started-at="2023-04-06T15:39:07 AST" name="Test_add_SAMSUNG_50_inch" finished-at="2023-04-06T15:39:10 AST" duration-ms="2983" status="PASS">
+        <test-method signature="Test_add_SAMSUNG_50_inch()[pri:0, instance:SmartBuy_Test1@55a147cc]" started-at="2023-04-08T23:37:01 AST" name="Test_add_SAMSUNG_50_inch" finished-at="2023-04-08T23:37:05 AST" duration-ms="4312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_add_SAMSUNG_50_inch -->
-        <test-method signature="check_the_price()[pri:0, instance:SmartBuy_Test1@55a147cc]" started-at="2023-04-06T15:39:10 AST" name="check_the_price" finished-at="2023-04-06T15:39:10 AST" duration-ms="124" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-whyyyyyyy expected [Ahmad] but found [SmartBuy | Electronics Store for Online Shopping in Jordan]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-whyyyyyyy expected [Ahmad] but found [SmartBuy | Electronics Store for Online Shopping in Jordan]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at SmartBuy_Test1.check_the_price(SmartBuy_Test1.java:60)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="check_the_price()[pri:0, instance:SmartBuy_Test1@55a147cc]" started-at="2023-04-08T23:37:05 AST" name="check_the_price" finished-at="2023-04-08T23:37:06 AST" duration-ms="1073" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- check_the_price -->
