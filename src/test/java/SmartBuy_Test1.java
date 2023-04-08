@@ -14,7 +14,8 @@ import org.testng.annotations.BeforeTest;
 public class SmartBuy_Test1 {
 
 	public WebDriver driver;
-	public int numOfTry = 6;
+	public int numOfTry = 1000;
+	public int inventoryItems = 6;
 	SoftAssert softassert = new SoftAssert();
 
 	@Test
@@ -24,31 +25,35 @@ public class SmartBuy_Test1 {
 
 		for (int i = 0; i < numOfTry; i++) {
 
+			if (i == inventoryItems) {
+				numOfTry = i;
+				break;
+
+			}
+
 			driver.findElement(By.xpath(
 					"//*[@id=\"newtab-Featured\"]/div/div[1]/div/div/div/div[2]/div/div[3]/div[1]/div/div/form[1]/div[1]/button"))
 					.click();
 			driver.findElement(By.xpath("//*[@id=\"addToCartLayer\"]/a[2]")).click();
-			
-			
 
 			String msg = driver.findElement(By.xpath("//*[@id=\"addToCartLayer\"]/div[1]")).getText();
 
-//			if (msg.contains("Sorry")) {
-//				
-//				numOfTry = i;
-//				driver.findElement(By.xpath("//*[@id=\"addToCartLayer\"]/a[1]")).click();
-//
-//			} else {
-//				driver.findElement(By.xpath("//*[@id=\"addToCartLayer\"]/a[2]")).click();
-//
-//			}
+			if (msg.contains("Sorry")) {
+
+				numOfTry = i;
+				driver.findElement(By.xpath("//*[@id=\"addToCartLayer\"]/a[1]")).click();
+
+			} else {
+				driver.findElement(By.xpath("//*[@id=\"addToCartLayer\"]/a[2]")).click();
+
+			}
 		}
 
 	}
 
 	@Test
 	public void check_the_price() {
-		
+
 		driver.navigate().back();
 
 		String single_item_price = driver
@@ -69,16 +74,13 @@ public class SmartBuy_Test1 {
 //		String newrr = rr.replace(",", "");
 //		double dd = Double.parseDouble(newrr);
 //		System.out.println(dd);
-		
 
 		Double final_price = Double.parseDouble(updated);
-//		System.out.println(final_price);
+		System.out.println(final_price);
 		System.err.println(final_price * numOfTry);
 
 		String actualTitle = driver.getTitle();
 		softassert.assertEquals(actualTitle, "SmartBuy | Electronics Store for Online Shopping in Jordan", "whyyyyy");
-		
-
 
 		softassert.assertEquals(final_price * numOfTry, 1500.0);
 
