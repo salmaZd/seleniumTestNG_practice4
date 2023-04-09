@@ -77,7 +77,7 @@ public class SmartBuy_Test1 {
 
 		Double final_price = Double.parseDouble(updated);
 		System.out.println(final_price);
-		System.err.println(final_price * numOfTry);
+		System.out.println(final_price * numOfTry);
 
 		String actualTitle = driver.getTitle();
 		softassert.assertEquals(actualTitle, "SmartBuy | Electronics Store for Online Shopping in Jordan", "whyyyyy");
